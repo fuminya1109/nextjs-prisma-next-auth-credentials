@@ -3,3 +3,7 @@ node_modules/
 # prisma
 prisma/dev.db
 .env.*
+
+# db
+/db/data
+/db/init

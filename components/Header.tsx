@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   logger.debug(session);
   let left = (
     <HStack>
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <a className="bold" data-active={isActive("/")}>
           Feed
         </a>
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
   if (status == "loading") {
     left = (
       <div>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a data-active={isActive("/")}>Feed</a>
         </Link>
       </div>
@@ -55,10 +55,10 @@ const Header: React.FC = () => {
   if (session) {
     left = (
       <HStack>
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a data-active={isActive("/")}>Feed</a>
         </Link>
-        <Link href="/drafts">
+        <Link href="/drafts" legacyBehavior>
           <a data-active={isActive("/drafts")}>My drafts</a>
         </Link>
       </HStack>
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
         <p>
           {session.user.name} ({session.user.email})
         </p>
-        <Link href="/create" passHref>
+        <Link href="/create" passHref legacyBehavior>
           <Button>
             <a>New post</a>
           </Button>

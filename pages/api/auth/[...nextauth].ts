@@ -8,7 +8,7 @@ import GitHubProvider from "next-auth/providers/github";
 import EmailProvider from "next-auth/providers/email";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-const options: NextAuthOptions = {
+export const options: NextAuthOptions = {
   debug: true,
   providers: [
     GitHubProvider({
